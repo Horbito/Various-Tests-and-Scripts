@@ -124,8 +124,12 @@
     <Compile Include="Assets\Imported Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\Imported Assets\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Imported Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
-    <Compile Include="Assets\Own Scripts\Gamepad_Controller.cs" />
+    <Compile Include="Assets\Own Stuff\Gamepad_Controller.cs" />
+    <Compile Include="Assets\Own Stuff\My_Gamepad_PlayerController.cs" />
+    <Compile Include="Assets\Own Stuff\My_ThirdPersonCamera.cs" />
     <Compile Include="Assets\Sebatian Lague Assets\SL Tutorials\(Old)PlayerController.cs" />
+    <Compile Include="Assets\Sebatian Lague Assets\SL Tutorials\SL_PlayerController.cs" />
+    <Compile Include="Assets\Sebatian Lague Assets\SL Tutorials\SL_ThirdPersonCamera.cs" />
     <Compile Include="Assets\Sebatian Lague Assets\SL Tutorials\slChaser.cs" />
     <Compile Include="Assets\Sebatian Lague Assets\SL Tutorials\slPlayer.cs" />
   </ItemGroup>
@@ -134,6 +138,7 @@
     <None Include="Assets\Imported Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Imported Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Imported Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Imported Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
