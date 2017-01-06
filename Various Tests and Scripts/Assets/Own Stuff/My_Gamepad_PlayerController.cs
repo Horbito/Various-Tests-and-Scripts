@@ -13,18 +13,28 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
     float speedSmoothVelocity;
     float currentSpeed;
 
+    bool Y_Down = false;
+    bool X_Down = false;
+    bool B_Down = false;
+
     Animator animator;
-    public SkinnedMeshRenderer sword;
+    //public SkinnedMeshRenderer sword;
     Transform cameraTransform;
+    
 
     void Start()
     {
+        //Y_Down = false;
+        //X_Down = false;
+        //B_Down = false;
+
+        print(Y_Down);
         animator = GetComponent<Animator>();
         cameraTransform = Camera.main.transform;
-        SkinnedMeshRenderer sword = GetComponentInChildren<SkinnedMeshRenderer>();
+        //sword = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
         //allows rotation
@@ -45,15 +55,68 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
 
         //multiples to forward/blue/Z axis of the transform component by the speed
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
-        
-        if(sword)
-        {
-            animator.SetBool("hasSword", true); //only works if the sword does not first appear
-        }
 
         //makes a variable to change the "speedPercent" which changes the animation, if isRunning is true will set speedPercent to 1 which will correspond to the run animation
         float animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude;
         animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime); //smooths animation
     }
+
+    void LateUpdate()
+    {
+        //animations, works ONLY if it is an FBX; REMEMBER TO ALWAYS IMPORT AS AN FBX
+        //transitions from no sword to with sword animations
+        if (Input.GetButtonDown("Y_Button") && !Y_Down)
+        {
+            print("The Y button works with bool");
+            animator.SetBool("hasSword", true);
+            Y_Down = true;
+        }
+        else if (Input.GetButtonDown("Y_Button") && Y_Down)
+        {
+            animator.SetBool("hasSword", false);
+            Y_Down = false;
+        }
+
+        //transitions from sword animation to unseathing animation
+        if (Input.GetButtonDown("B_Button") && !B_Down)
+        {
+            animator.SetBool("hasSwordOut", true);
+            B_Down = true;
+        }
+        else if (Input.GetButtonDown("B_Button") && B_Down)
+        {
+            animator.SetBool("hasSwordOut", false);
+            B_Down = false;
+        }
+
+        //trainsitions from unseathing animation to attacking animation
+        if (Input.GetButtonDown("X_Button") && !X_Down)
+        {
+            animator.SetBool("isAttacking", true);
+            X_Down = true;
+        }
+        else if (Input.GetButtonDown("X_Button") && X_Down)
+        {
+            animator.SetBool("isAttacking", false);
+            X_Down = false;
+        }
+
+    }
+
+    /*
+    void animationFunction(string buttonName, bool buttonDown, string boolAnimationName) //(X_Button, X_Down, "isAttacking) example 
+    {
+        if(Input.GetButtonDown(buttonName) && !buttonDown)
+        {
+            animator.SetBool(boolAnimationName, true);
+            buttonDown = false;
+        }
+        else if(Input.GetButtonDown(buttonName) && buttonDown)
+        {
+            animator.SetBool(boolAnimationName, false);
+            buttonDown = true;
+        }
+    }
+    */
 }
 

@@ -29,7 +29,8 @@ public class My_ThirdPersonCamera : MonoBehaviour {
 
     void LateUpdate()
     {
-        yaw += Input.GetAxis("Right_Horizontal_Joystick") * mouseSensitivity; //sets the varible yaw,the y axis, to the axis from the input manger "Mouse X"
+        //remember that all axis are set in the input manger
+        yaw += Input.GetAxis("Right_Horizontal_Joystick") * mouseSensitivity; //sets the varible yaw,the y axis, to the x axis value given by the right joystick
         pitch += Input.GetAxis("Right_Vertical_Joystick") * mouseSensitivity; //sets the variable pitch, the x axis, to the y value given by the mouse
         pitch = Mathf.Clamp(pitch, pitchMin, pitchMax); //sets the value of the variable between the pitchMin value and the pitchMax value
 

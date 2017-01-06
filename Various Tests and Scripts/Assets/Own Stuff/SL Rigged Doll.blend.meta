@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 64c503cb08e78be48bfc303be47842d8
-timeCreated: 1483482771
+timeCreated: 1483594864
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -29,6 +29,8 @@ ModelImporter:
     100042: Sword
     100044: Armature_001
     100046: Sword_Bone
+    100048: Fingers_L
+    100050: Fingers_R
     400000: Armature
     400002: Cube
     400004: Foot_L
@@ -53,8 +55,12 @@ ModelImporter:
     400042: Sword
     400044: Armature_001
     400046: Sword_Bone
+    400048: Fingers_L
+    400050: Fingers_R
     2300000: Sword
+    2300002: Cube
     3300000: Sword
+    3300002: Cube
     4300000: Cube
     4300002: Sword
     7400000: Default Take
@@ -68,6 +74,7 @@ ModelImporter:
     7400016: Reg_Run
     7400018: Reg_WalkCycle
     7400020: Sword_WalkCycle
+    7400022: Sword_Attacking
     9500000: //RootNode
     13700000: Cube
     13700002: Sword
@@ -79,7 +86,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: <Root Transform>
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Reg_Idle' has import animation warnings that
@@ -99,10 +106,15 @@ ModelImporter:
       that will be discarded.\n\t'Lower_Leg_L' has scale animation that will be discarded.\n\t'Foot_L'
       has scale animation that will be discarded.\n\t'Upper_Leg_R' has scale animation
       that will be discarded.\n\t'Lower_Leg_R' has scale animation that will be discarded.\n\t'Foot_R'
-      has scale animation that will be discarded.\n\nClip 'Sword_Idle' has import
+      has scale animation that will be discarded.\n\nClip 'Sword_Attacking' has import
       animation warnings that might lower retargeting quality:\nNote: Activate translation
       DOF on avatar to improve retargeting quality.\n\t'Lower_Leg_L' has scale animation
       that will be discarded.\n\t'Foot_L' has scale animation that will be discarded.\n\t'Lower_Leg_R'
+      has scale animation that will be discarded.\n\t'Foot_R' has scale animation
+      that will be discarded.\n\nClip 'Sword_Idle' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Lower_Leg_L' has scale animation that will
+      be discarded.\n\t'Foot_L' has scale animation that will be discarded.\n\t'Lower_Leg_R'
       has scale animation that will be discarded.\n\t'Foot_R' has scale animation
       that will be discarded.\n\nClip 'Sword_Run' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
@@ -116,7 +128,12 @@ ModelImporter:
       that will be discarded.\n\t'Lower_Leg_L' has scale animation that will be discarded.\n\t'Foot_L'
       has scale animation that will be discarded.\n\t'Upper_Leg_R' has scale animation
       that will be discarded.\n\t'Lower_Leg_R' has scale animation that will be discarded.\n\t'Foot_R'
-      has scale animation that will be discarded.\n"
+      has scale animation that will be discarded.\n\nClip 'Untitled_002' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Lower_Leg_L' has scale animation
+      that will be discarded.\n\t'Foot_L' has scale animation that will be discarded.\n\t'Lower_Leg_R'
+      has scale animation that will be discarded.\n\t'Foot_R' has scale animation
+      that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -710,6 +727,84 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_Attacking
+      takeName: Sword_Attacking
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper_Arm_L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper_Arm_L/Lower_Arm_L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper_Arm_L/Lower_Arm_L/Hand_L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper_Arm_L/Lower_Arm_L/Hand_L/Fingers_L
+        weight: 0
+      - path: Armature/Root/Hip/Spine/Upper_Arm_R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper_Arm_R/Lower_Arm_R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper_Arm_R/Lower_Arm_R/Hand_R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper_Arm_R/Lower_Arm_R/Hand_R/Fingers_R
+        weight: 0
+      - path: Armature/Root/Hip/Sword_Bone
+        weight: 0
+      - path: Armature/Root/Hip/Upper_Leg_L
+        weight: 1
+      - path: Armature/Root/Hip/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature/Root/Hip/Upper_Leg_L/Lower_Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip/Upper_Leg_L/Lower_Leg_L/Foot_L/Toes_L
+        weight: 1
+      - path: Armature/Root/Hip/Upper_Leg_R
+        weight: 1
+      - path: Armature/Root/Hip/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature/Root/Hip/Upper_Leg_R/Lower_Leg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip/Upper_Leg_R/Lower_Leg_R/Foot_R/Toes_R
+        weight: 1
+      - path: Cube
+        weight: 0
+      - path: Sword
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -881,7 +976,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Armature
       parentName: SL Rigged Doll(Clone)
-      position: {x: -0, y: 0, z: 0}
+      position: {x: -0, y: -0.0020767804, z: 9.0779e-11}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Root
@@ -917,8 +1012,13 @@ ModelImporter:
     - name: Hand_L
       parentName: Lower_Arm_L
       position: {x: -0.25872692, y: 0.000000021565938, z: 0.00000010986696}
-      rotation: {x: -0.026454063, y: -0.026442053, z: -0.0010609524, w: 0.9992997}
+      rotation: {x: -0.026450362, y: -0.031284135, z: -0.0012552371, w: 0.9991597}
       scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Fingers_L
+      parentName: Hand_L
+      position: {x: -0.09117059, y: 6.98492e-10, z: -0.000000070780516}
+      rotation: {x: 0.0332404, y: -0.047513437, z: -0.0015820382, w: 0.9983161}
+      scale: {x: 1, y: 0.9999999, z: 1}
     - name: Upper_Arm_R
       parentName: Spine
       position: {x: -0.24680088, y: 0.12061203, z: -0.022289947}
@@ -932,8 +1032,13 @@ ModelImporter:
     - name: Hand_R
       parentName: Lower_Arm_R
       position: {x: -0.25872692, y: 0.000000018328137, z: 0.00000010986696}
-      rotation: {x: 0.026454058, y: -0.026442058, z: 0.0010609524, w: 0.9992997}
-      scale: {x: 0.99999994, y: 1, z: 1}
+      rotation: {x: 0.02643713, y: -0.04441398, z: 0.0017820486, w: 0.99866176}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Fingers_R
+      parentName: Hand_R
+      position: {x: -0.09856051, y: 0.000000006984919, z: -0.00000009825453}
+      rotation: {x: -0.033228014, y: -0.05473236, z: 0.0018224063, w: 0.9979464}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
     - name: Upper_Leg_L
       parentName: Hip
       position: {x: 0.01823562, y: -0.0555882, z: -0.002016538}
@@ -974,11 +1079,21 @@ ModelImporter:
       position: {x: -0.08394245, y: 0.000000010563126, z: 0.000000001164153}
       rotation: {x: -0.000000023360712, y: -0.30942214, z: 8.847661e-15, w: 0.9509248}
       scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Sword_Bone
+      parentName: Hip
+      position: {x: -0.028058419, y: -0.12538107, z: -0.05981716}
+      rotation: {x: -0.42475027, y: 0.57370555, z: -0.5653205, w: -0.41335458}
+      scale: {x: 0.99999994, y: 1, z: 1}
     - name: Cube
       parentName: SL Rigged Doll(Clone)
-      position: {x: -0, y: 0, z: 0}
+      position: {x: -0, y: 0, z: -0.0020767804}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+    - name: Sword
+      parentName: SL Rigged Doll(Clone)
+      position: {x: -0, y: 0, z: -0.0020767804}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.025, y: 0.025, z: 0.025}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
