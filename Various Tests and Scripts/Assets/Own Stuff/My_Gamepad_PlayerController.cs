@@ -14,12 +14,14 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
     float currentSpeed;
 
     Animator animator;
+    public SkinnedMeshRenderer sword;
     Transform cameraTransform;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         cameraTransform = Camera.main.transform;
+        SkinnedMeshRenderer sword = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     void Update()
@@ -43,6 +45,11 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
 
         //multiples to forward/blue/Z axis of the transform component by the speed
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+        
+        if(sword)
+        {
+            animator.SetBool("hasSword", true); //only works if the sword does not first appear
+        }
 
         //makes a variable to change the "speedPercent" which changes the animation, if isRunning is true will set speedPercent to 1 which will correspond to the run animation
         float animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude;
