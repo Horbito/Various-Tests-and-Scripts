@@ -104,6 +104,7 @@ ModelImporter:
     7400024: Armature|Untitled.001
     7400026: Armature|Untitled.002
     7400028: Sword_Unsheathe
+    7400030: Sword_Sheathe
     9500000: //RootNode
     13700000: Cube
     13700002: Sword
@@ -1341,6 +1342,116 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_Unsheathe
       takeName: Armature|Sword_Unsheathe
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_Sheathe
+      takeName: Armature|Sword_Sheathe
       firstFrame: 0
       lastFrame: 12
       wrapMode: 0

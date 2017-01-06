@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class My_Gamepad_PlayerController : MonoBehaviour {
+public class My_Gamepad_PlayerController : MonoBehaviour
+{
     public float walkSpeed = 2;
     public float runSpeed = 6;
 
@@ -20,21 +21,16 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
     Animator animator;
     //public SkinnedMeshRenderer sword;
     Transform cameraTransform;
-    
+
 
     void Start()
     {
-        //Y_Down = false;
-        //X_Down = false;
-        //B_Down = false;
-
-        print(Y_Down);
         animator = GetComponent<Animator>();
         cameraTransform = Camera.main.transform;
         //sword = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
 
         //allows rotation
@@ -45,7 +41,7 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
         if (inputDirection != Vector2.zero)
         {
             //rotation of the game object and the main camera rotation for directing the object direction 
-            float targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y; 
+            float targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime); //sets rotation and smooths rotation
         }
 
@@ -56,22 +52,26 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
         //multiples to forward/blue/Z axis of the transform component by the speed
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
+
+
         //makes a variable to change the "speedPercent" which changes the animation, if isRunning is true will set speedPercent to 1 which will correspond to the run animation
         float animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude;
         animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime); //smooths animation
+
     }
 
     void LateUpdate()
     {
+        //animationFunction("Y_Button", Y_Down, "hasSword");
         //animations, works ONLY if it is an FBX; REMEMBER TO ALWAYS IMPORT AS AN FBX
         //transitions from no sword to with sword animations
+
         if (Input.GetButtonDown("Y_Button") && !Y_Down)
         {
-            print("The Y button works with bool");
             animator.SetBool("hasSword", true);
             Y_Down = true;
         }
-        else if (Input.GetButtonDown("Y_Button") && Y_Down)
+        else if (Input.GetButtonDown("Y_Button"))
         {
             animator.SetBool("hasSword", false);
             Y_Down = false;
@@ -90,33 +90,28 @@ public class My_Gamepad_PlayerController : MonoBehaviour {
         }
 
         //trainsitions from unseathing animation to attacking animation
-        if (Input.GetButtonDown("X_Button") && !X_Down)
-        {
-            animator.SetBool("isAttacking", true);
-            X_Down = true;
-        }
-        else if (Input.GetButtonDown("X_Button") && X_Down)
-        {
-            animator.SetBool("isAttacking", false);
-            X_Down = false;
-        }
+        if (Input.GetButtonDown("X_Button")) { animator.SetBool("isAttacking", true); }
+        else{ animator.SetBool("isAttacking", false); }
 
     }
-
+}
+    //won't work for some damn reason even though it is the exact same as above
     /*
-    void animationFunction(string buttonName, bool buttonDown, string boolAnimationName) //(X_Button, X_Down, "isAttacking) example 
+    void animationFunction(string buttonName, bool buttonDown, string boolAnimationName) //(X_Button, X_Down, "isAttacking") example 
     {
-        if(Input.GetButtonDown(buttonName) && !buttonDown)
+        if(Input.GetButtonDown(buttonName) && (buttonDown == false))
         {
             animator.SetBool(boolAnimationName, true);
-            buttonDown = false;
-        }
-        else if(Input.GetButtonDown(buttonName) && buttonDown)
-        {
-            animator.SetBool(boolAnimationName, false);
             buttonDown = true;
+        }
+        else if(Input.GetButtonDown(buttonName) && (buttonDown == true))
+        {
+            print("this part works");
+            animator.SetBool(boolAnimationName, false);
+            buttonDown = false;
         }
     }
     */
-}
+    
+
 
