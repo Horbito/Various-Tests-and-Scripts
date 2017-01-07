@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AI_LineOfSightChase : MonoBehaviour {
 
     public Transform player;
     public float speed = 0.1f;
     static Animator anim;
+
+    public Slider healthbar;
 
     // Use this for initialization
     void Start()
@@ -17,6 +20,7 @@ public class AI_LineOfSightChase : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (healthbar.value <= 0) return; //returns the script so it stops once the value is 0
 
         Vector3 direction = player.position - this.transform.position; //calculates the vector between the position of the player and the object
         float angle = Vector3.Angle(direction, this.transform.forward); //gets the angle of the vector and the blue/Z axis
