@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Holisitc3D AI and Melee.unity
+- path: Assets/Scenes/Simple_Terrain.unity
   isLoaded: 1
   isActive: 1
