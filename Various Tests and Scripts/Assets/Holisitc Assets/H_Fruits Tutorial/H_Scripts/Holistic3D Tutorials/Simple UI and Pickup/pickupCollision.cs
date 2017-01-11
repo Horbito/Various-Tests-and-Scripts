@@ -39,6 +39,11 @@ public class pickupCollision : MonoBehaviour {
             i = Instantiate(inventoryIcons[2]);
             i.transform.SetParent(inventoryPanel.transform);
         }
+        if(collision.gameObject.tag == "weapon")
+        {
+            i = Instantiate(inventoryIcons[3]);
+            i.transform.SetParent(inventoryPanel.transform);
+        }
     }
 
 }
