@@ -1,0 +1,1608 @@
+fileFormatVersion: 2
+guid: 81c8aa0a8c682d84484ca3397ac65d36
+timeCreated: 1483595471
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Camera
+    100004: Cube
+    100006: Fingers.L
+    100008: Fingers.L_end
+    100010: Fingers.R
+    100012: Fingers.R_end
+    100014: Foot.L
+    100016: Foot.R
+    100018: Hand.L
+    100020: Hand.R
+    100022: Head
+    100024: Head_end
+    100026: Hip
+    100028: Lamp
+    100030: Leg IK.L
+    100032: Leg IK.L_end
+    100034: Leg IK.R
+    100036: Leg IK.R_end
+    100038: Lower Arm.L
+    100040: Lower Arm.R
+    100042: Lower Leg.L
+    100044: Lower Leg.R
+    100046: Pole Target.L
+    100048: Pole Target.L_end
+    100050: Pole Target.R
+    100052: Pole Target.R_end
+    100054: Root
+    100056: //RootNode
+    100058: Spine
+    100060: Sword
+    100062: Sword Bone
+    100064: Sword Bone_end
+    100066: Toes.L
+    100068: Toes.L_end
+    100070: Toes.R
+    100072: Toes.R_end
+    100074: Upper Arm.L
+    100076: Upper Arm.R
+    100078: Upper Leg.L
+    100080: Upper Leg.R
+    400000: Armature
+    400002: Camera
+    400004: Cube
+    400006: Fingers.L
+    400008: Fingers.L_end
+    400010: Fingers.R
+    400012: Fingers.R_end
+    400014: Foot.L
+    400016: Foot.R
+    400018: Hand.L
+    400020: Hand.R
+    400022: Head
+    400024: Head_end
+    400026: Hip
+    400028: Lamp
+    400030: Leg IK.L
+    400032: Leg IK.L_end
+    400034: Leg IK.R
+    400036: Leg IK.R_end
+    400038: Lower Arm.L
+    400040: Lower Arm.R
+    400042: Lower Leg.L
+    400044: Lower Leg.R
+    400046: Pole Target.L
+    400048: Pole Target.L_end
+    400050: Pole Target.R
+    400052: Pole Target.R_end
+    400054: Root
+    400056: //RootNode
+    400058: Spine
+    400060: Sword
+    400062: Sword Bone
+    400064: Sword Bone_end
+    400066: Toes.L
+    400068: Toes.L_end
+    400070: Toes.R
+    400072: Toes.R_end
+    400074: Upper Arm.L
+    400076: Upper Arm.R
+    400078: Upper Leg.L
+    400080: Upper Leg.R
+    4300000: Cube
+    4300002: Sword
+    7400000: Armature|Action
+    7400002: ArmatureAction
+    7400004: Reg_Idle
+    7400006: Reg_Run
+    7400008: Reg_T-Pose
+    7400010: Reg_WalkCycle
+    7400012: Sword_Attacking
+    7400014: Sword_Idle
+    7400016: Sword_Run
+    7400018: Sword_T-Pose
+    7400020: Sword_WalkCycle
+    7400022: Armature|Untitled
+    7400024: Armature|Untitled.001
+    7400026: Armature|Untitled.002
+    7400028: Sword_Unsheathe
+    7400030: Sword_Sheathe
+    9500000: //RootNode
+    13700000: Cube
+    13700002: Sword
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Action
+      takeName: Armature|Action
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Reg_Idle
+      takeName: Armature|Reg_Idle
+      firstFrame: 0
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Reg_Run
+      takeName: Armature|Reg_Run
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Reg_T-Pose
+      takeName: Armature|Reg_T-Pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Reg_WalkCycle
+      takeName: Armature|Reg_WalkCycle
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_Attacking
+      takeName: Armature|Sword_Attacking
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_Idle
+      takeName: Armature|Sword_Idle
+      firstFrame: 0
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_Run
+      takeName: Armature|Sword_Run
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_T-Pose
+      takeName: Armature|Sword_T-Pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_WalkCycle
+      takeName: Armature|Sword_WalkCycle
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_Unsheathe
+      takeName: Armature|Sword_Unsheathe
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_Sheathe
+      takeName: Armature|Sword_Sheathe
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hip
+        weight: 1
+      - path: Armature/Root/Hip/Spine
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Head/Head_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.L/Lower Arm.L/Hand.L/Fingers.L/Fingers.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R
+        weight: 1
+      - path: Armature/Root/Hip/Spine/Upper Arm.R/Lower Arm.R/Hand.R/Fingers.R/Fingers.R_end
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone
+        weight: 1
+      - path: Armature/Root/Hip/Sword Bone/Sword Bone_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.L/Lower Leg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Armature/Root/Hip/Upper Leg.R/Lower Leg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 1
+      - path: Armature/Root/Leg IK.L
+        weight: 1
+      - path: Armature/Root/Leg IK.L/Leg IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg IK.R
+        weight: 1
+      - path: Armature/Root/Leg IK.R/Leg IK.R_end
+        weight: 1
+      - path: Armature/Root/Pole Target.L
+        weight: 1
+      - path: Armature/Root/Pole Target.L/Pole Target.L_end
+        weight: 1
+      - path: Armature/Root/Pole Target.R
+        weight: 1
+      - path: Armature/Root/Pole Target.R/Pole Target.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
