@@ -33,8 +33,9 @@ public class My_CharAnimation_Controller : MonoBehaviour {
             weapon.transform.SetParent(weaponPosition);
             weapon.transform.localPosition = weaponPosition.transform.localPosition + new Vector3(0, 0.002f); //added 0.002f to the y axis because of the model i made
             weapon.transform.localRotation = weaponPosition.transform.localRotation;
-            A_Down = true;
+            A_Down = true; //makes sure that a weapon can not be made multiple times because one of the requirements of this if statement is false
         }
+
 
         //animationFunction("Y_Button", Y_Down, "hasSword");
         //animations, works ONLY if it is an FBX; REMEMBER TO ALWAYS IMPORT AS AN FBX
@@ -45,10 +46,14 @@ public class My_CharAnimation_Controller : MonoBehaviour {
             animator.SetBool("hasSword", true);
             Y_Down = true;
         }
-        else if (Input.GetButtonDown("Y_Button"))
+        else if (Input.GetButtonDown("Y_Button") && Y_Down && weaponPosition.childCount <= 0)
         {
             animator.SetBool("hasSword", false);
             Y_Down = false;
+        }
+        else if (Y_Down && weaponPosition.childCount > 0)
+        {
+            //cannot go back since the player has a sword
         }
 
         //transitions from sword animation to unseathing animation

@@ -28,6 +28,8 @@ public class My_InputGamepad_Controller : MonoBehaviour {
 
     void Update()
     {
+        //Debug.Log(1.0f / Time.deltaTime);
+
         //allows rotation
         Vector2 input = new Vector2(Input.GetAxisRaw("Left_Horizontal_Joystick"), -(Input.GetAxisRaw("Left_Vertical_Joystick"))); //
         Vector2 inputDirection = input.normalized; //

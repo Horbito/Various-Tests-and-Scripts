@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equip : MonoBehaviour {
-
-    public Transform weapon;
+public class My_Interactable : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
