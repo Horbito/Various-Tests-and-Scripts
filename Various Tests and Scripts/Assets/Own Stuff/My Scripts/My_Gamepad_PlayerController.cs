@@ -49,7 +49,7 @@ public class My_Gamepad_PlayerController : MonoBehaviour
         if (inputDirection != Vector2.zero)
         {
             //rotation of the game object and the main camera rotation for directing the object direction 
-            float targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y; //camera is added so it stays with the player's rotation
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime); //sets rotation and smooths rotation
         }
 

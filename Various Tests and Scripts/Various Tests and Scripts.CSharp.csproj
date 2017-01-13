@@ -87,10 +87,13 @@
     <Compile Include="Assets\Holisitc Assets\H_Fruits Tutorial\H_Scripts\Holistic3D Tutorials\Simple UI and Pickup\pickupCollision.cs" />
     <Compile Include="Assets\Holisitc Assets\H_Fruits Tutorial\H_Scripts\Holistic3D Tutorials\Simple UI and Pickup\respawnSpheres.cs" />
     <Compile Include="Assets\Holisitc Assets\H_Fruits Tutorial\H_Scripts\Holistic3D Tutorials\Simple UI and Pickup\spawnRandomObjects.cs" />
+    <Compile Include="Assets\Imported Assets\MedievalTownExteriors\Scripts\ProtectCameraFromWallClip.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Equip.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Gamepad_Controller.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\My_CharAnimation_Controller.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Consume.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Gamepad_PlayerController.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\My_InputGamepad_Controller.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_PickupCollision.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_SetScale.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_ThirdPersonCamera.cs" />
@@ -101,10 +104,12 @@
     <Compile Include="Assets\Sebatian Lague Assets\SL Tutorials\slPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Imported Assets\MedievalTownExteriors\Readme.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
