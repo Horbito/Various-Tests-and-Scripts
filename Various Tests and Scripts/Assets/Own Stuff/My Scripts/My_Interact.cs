@@ -6,18 +6,21 @@ public class My_Interact : MonoBehaviour {
 
     public Transform interactObject;
 
-    void FixedUpdate()
+    void Update()
     {
-        if(Input.GetButton("A_Button"))
+        Vector3 directionVector = this.transform.position - interactObject.transform.position;
+        float viewAngle = Vector3.Angle(directionVector, this.transform.forward);
+        if (Input.GetButton("A_Button") && viewAngle < 30)
         {
             GetInteraction();
         }
+
     }
 
     void GetInteraction()
     {
         float distancePlayerAndObject = Vector3.Distance(this.transform.position, interactObject.transform.position);
-        if (distancePlayerAndObject < 5.0f && Physics.Raycast(transform.position, Vector3.forward, 10))
+        if (distancePlayerAndObject < 5.0f)
         {
             Debug.Log("I am interacting with this");
         }
