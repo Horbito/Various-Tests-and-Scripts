@@ -31,6 +31,7 @@ ModelImporter:
     100046: Upper_Leg_R
     100048: Left_Arm
     100050: Right_Arm
+    100052: Head_0
     400000: Armature
     400002: Cube
     400004: Fingers_L
@@ -57,9 +58,11 @@ ModelImporter:
     400046: Upper_Leg_R
     400048: Left_Arm
     400050: Right_Arm
+    400052: Head_0
     4300000: Cube
     4300002: Left_Arm
     4300004: Right_Arm
+    4300006: Head
     7400000: Default Take
     7400002: Reg_Idle
     7400004: Reg_Run
@@ -77,6 +80,7 @@ ModelImporter:
     13700000: Cube
     13700002: Left_Arm
     13700004: Right_Arm
+    13700006: Head
   materials:
     importMaterials: 1
     materialName: 0

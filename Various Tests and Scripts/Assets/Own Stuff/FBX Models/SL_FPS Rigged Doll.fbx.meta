@@ -47,6 +47,7 @@ ModelImporter:
     100078: Upper Arm.R
     100080: Upper Leg.L
     100082: Upper Leg.R
+    100084: Head 1
     400000: Armature
     400002: Camera
     400004: Cube
@@ -89,9 +90,11 @@ ModelImporter:
     400078: Upper Arm.R
     400080: Upper Leg.L
     400082: Upper Leg.R
+    400084: Head 1
     4300000: Left_Arm
     4300002: Right_Arm
     4300004: Cube
+    4300006: Head
     7400000: Action
     7400002: ArmatureAction
     7400004: Reg_Idle
@@ -111,6 +114,7 @@ ModelImporter:
     13700000: Cube
     13700002: Left_Arm
     13700004: Right_Arm
+    13700006: Head
   materials:
     importMaterials: 1
     materialName: 0
@@ -815,7 +819,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

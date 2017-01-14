@@ -24,8 +24,6 @@ public class My_FPS_PlayerController : MonoBehaviour {
         Vector2 inputDirectionForward = inputForward.normalized;
         Vector2 inputStraffe = new Vector2(Input.GetAxisRaw("Left_Horizontal_Joystick"), 0);
         Vector2 inputDirectionStraffe = inputStraffe.normalized;
-        //float translation = -(Input.GetAxisRaw("Left_Vertical_Joystick"));
-        //float straffe = Input.GetAxisRaw("Left_Horizontal_Joystick");
 
         bool isRunning = Input.GetButton("Left_Click_Joystick");
         bool isInputStraffe = (inputDirectionStraffe.magnitude > 0.15);
