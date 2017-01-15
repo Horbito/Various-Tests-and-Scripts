@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class My_SwitchPOV : MonoBehaviour {
 
+    //use this script to switch between POV
     public My_FPS_PlayerController fpsPlayerController;
     public My_FPS_CameraController fpsCameraController;
     public My_InputGamepad_Controller thirdPersonController;
@@ -16,37 +17,87 @@ public class My_SwitchPOV : MonoBehaviour {
     bool fpsActivated = true;
     bool thirdPersonActivated;
 
-	void Update ()
+    public bool usingKeyboard = false;
+    public bool usingGamepad = true;
+
+    void Update ()
     {
-	    if(Input.GetButton("Left_Bumper") && fpsActivated)
-        {
-            fpsPlayerController.enabled = false;
-            fpsCameraController.enabled = false;
-            fpsMainCamera.enabled = false;
+      if(Input.GetKey(KeyCode.Alpha1) && usingKeyboard == true)
+      {
+        usingKeyboard = false;
+        usingGamepad = true;
+      }
+      else if(Input.GetButton("Right_Bumper") && usingGamepad == true)
+      {
+        usingKeyboard = true;
+        usingGamepad = false;
+      }
 
-            thirdPersonMainCamera.enabled = true;
-            thirdPersonController.enabled = true;
-            thirdPersonCamera.enabled = true;
-            bodyRender.enabled = true;
-            headRender.enabled = true;
+      if(usingGamepad == true)
+      {
+            if (Input.GetButton("Left_Bumper") && fpsActivated)
+            {
+                fpsPlayerController.enabled = false;
+                fpsCameraController.enabled = false;
+                fpsMainCamera.enabled = false;
 
-            fpsActivated = false;
-            thirdPersonActivated = true;
+                thirdPersonMainCamera.enabled = true;
+                thirdPersonController.enabled = true;
+                thirdPersonCamera.enabled = true;
+                bodyRender.enabled = true;
+                headRender.enabled = true;
+
+                fpsActivated = false;
+                thirdPersonActivated = true;
+            }
+            else if (Input.GetButton("Left_Bumper") && thirdPersonActivated)
+            {
+                fpsPlayerController.enabled = true;
+                fpsCameraController.enabled = true;
+                fpsMainCamera.enabled = true;
+
+                thirdPersonCamera.enabled = false;
+                thirdPersonController.enabled = false;
+                thirdPersonCamera.enabled = false;
+                bodyRender.enabled = false;
+                headRender.enabled = false;
+
+                fpsActivated = true;
+                thirdPersonActivated = false;
+            }
         }
-        else if(Input.GetButton("Left_Bumper") && thirdPersonActivated)
-        {
-            fpsPlayerController.enabled = true;
-            fpsCameraController.enabled = true;
-            fpsMainCamera.enabled = true;
+      if(usingKeyboard == true)
+      {
+            if (Input.GetKeyDown(KeyCode.Tab) && fpsActivated)
+            {
+                fpsPlayerController.enabled = false;
+                fpsCameraController.enabled = false;
+                fpsMainCamera.enabled = false;
 
-            thirdPersonCamera.enabled = false;
-            thirdPersonController.enabled = false;
-            thirdPersonCamera.enabled = false;
-            bodyRender.enabled = false;
-            headRender.enabled = false;
+                thirdPersonMainCamera.enabled = true;
+                thirdPersonController.enabled = true;
+                thirdPersonCamera.enabled = true;
+                bodyRender.enabled = true;
+                headRender.enabled = true;
 
-            fpsActivated = true;
-            thirdPersonActivated = false;
+                fpsActivated = false;
+                thirdPersonActivated = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Tab) && thirdPersonActivated)
+            {
+                fpsPlayerController.enabled = true;
+                fpsCameraController.enabled = true;
+                fpsMainCamera.enabled = true;
+
+                thirdPersonCamera.enabled = false;
+                thirdPersonController.enabled = false;
+                thirdPersonCamera.enabled = false;
+                bodyRender.enabled = false;
+                headRender.enabled = false;
+
+                fpsActivated = true;
+                thirdPersonActivated = false;
+            }
         }
 	}
 }

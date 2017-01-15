@@ -36,7 +36,6 @@ public class My_CharAnimation_Controller : MonoBehaviour {
             A_Down = true; //makes sure that a weapon can not be made multiple times because one of the requirements of this if statement is false
         }
 
-
         //animationFunction("Y_Button", Y_Down, "hasSword");
         //animations, works ONLY if it is an FBX; REMEMBER TO ALWAYS IMPORT AS AN FBX
         //transitions from no sword to with sword animations

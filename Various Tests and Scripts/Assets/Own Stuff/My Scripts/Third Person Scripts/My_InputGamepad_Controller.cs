@@ -17,41 +17,71 @@ public class My_InputGamepad_Controller : MonoBehaviour {
     float currentSpeed; //sets a current speed for a startin point for the smoothness
 
     Animator animator;
+    GameObject thePlayer;
+    My_SwitchPOV switchInput;
     public Transform cameraTransform;
 
     // Use this for initialization
     void Start ()
     {
+        thePlayer = this.gameObject;
+        switchInput = thePlayer.GetComponent<My_SwitchPOV>();
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         //Debug.Log(1.0f / Time.deltaTime);
-
-        //allows rotation
-        Vector2 input = new Vector2(Input.GetAxisRaw("Left_Horizontal_Joystick"), -(Input.GetAxisRaw("Left_Vertical_Joystick"))); //
-        Vector2 inputDirection = input.normalized; //
-
-        //this function allows smooth movement and rotation of the object and the function runes if the value of the input is not zero
-        if (inputDirection != Vector2.zero)
+        if(switchInput.usingGamepad == true)
         {
-            //rotation of the game object and the main camera rotation for directing the object direction 
-            float targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y; //camera is added so it stays with the player's rotation
-            transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime); //sets rotation and smooths rotation
+            //allows rotation
+            Vector2 input = new Vector2(Input.GetAxisRaw("Left_Horizontal_Joystick"), -(Input.GetAxisRaw("Left_Vertical_Joystick"))); //
+            Vector2 inputDirection = input.normalized; //
+
+            //this function allows smooth movement and rotation of the object and the function runes if the value of the input is not zero
+            if (inputDirection != Vector2.zero)
+            {
+                //rotation of the game object and the main camera rotation for directing the object direction 
+                float targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y; //camera is added so it stays with the player's rotation
+                transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime); //sets rotation and smooths rotation
+            }
+
+            bool isRunning = Input.GetButton("Left_Click_Joystick"); //isRunning is set to true when it gets the left shift input
+            float targetSpeed = ((isRunning) ? runSpeed : walkSpeed) * inputDirection.magnitude; //question if isRunning true, and if it is, then we go with run speed, if not then walk speed
+            currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime); //smooths movment
+
+
+            //multiples to forward/blue/Z axis of the transform component by the speed
+            transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+
+            //makes a variable to change the "speedPercent" which changes the animation, if isRunning is true will set speedPercent to 1 which will correspond to the run animation
+            float animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude;
+            animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime); //smooths animation
         }
 
-        bool isRunning = Input.GetButton("Left_Click_Joystick"); //isRunning is set to true when it gets the left shift input
-        float targetSpeed = ((isRunning) ? runSpeed : walkSpeed) * inputDirection.magnitude; //question if isRunning true, and if it is, then we go with run speed, if not then walk speed
-        currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime); //smooths movment
+        if(switchInput.usingKeyboard == true)
+        {
+            //allows rotation
+            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); //
+            Vector2 inputDirection = input.normalized; //
 
+            //this function allows smooth movement and rotation of the object and the function runes if the value of the input is not zero
+            if (inputDirection != Vector2.zero)
+            {
+                float targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+                transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime); //sets rotation and smooths rotation
+            }
 
-        //multiples to forward/blue/Z axis of the transform component by the speed
-        transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+            bool isRunning = Input.GetKey(KeyCode.LeftShift); //isRunning is set to true when it gets the left shift input
+            float targetSpeed = ((isRunning) ? runSpeed : walkSpeed) * inputDirection.magnitude; //question if isRunning true, and if it is, then we go with run speed, if not then walk speed
+            currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime); //smooths movment
 
-        //makes a variable to change the "speedPercent" which changes the animation, if isRunning is true will set speedPercent to 1 which will correspond to the run animation
-        float animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude;
-        animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime); //smooths animation
+            //multiples to forward/blue/Z axis of the transform component by the speed
+            transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+
+            float animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude; //makes a variable to change the "speedPercent" which changes the animation
+            animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime); //smooths animation
+        }
 
     }
 }
