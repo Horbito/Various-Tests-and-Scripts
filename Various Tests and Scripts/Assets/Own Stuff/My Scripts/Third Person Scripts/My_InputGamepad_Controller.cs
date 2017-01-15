@@ -17,13 +17,12 @@ public class My_InputGamepad_Controller : MonoBehaviour {
     float currentSpeed; //sets a current speed for a startin point for the smoothness
 
     Animator animator;
-    Transform cameraTransform;
+    public Transform cameraTransform;
 
     // Use this for initialization
     void Start ()
     {
         animator = GetComponent<Animator>();
-        cameraTransform = Camera.main.transform;
     }
 
     void Update()
