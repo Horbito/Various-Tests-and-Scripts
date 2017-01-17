@@ -22,21 +22,24 @@ public class My_SwitchPOV : MonoBehaviour {
 
     void Update ()
     {
+      if(usingKeyboard == true) { usingGamepad = false; }
+      if(usingGamepad == true){ usingKeyboard = false;}
+
       if(Input.GetKey(KeyCode.Alpha1) && usingKeyboard == true)
       {
-        usingKeyboard = false;
-        usingGamepad = true;
+        usingKeyboard = false; usingGamepad = true;
       }
       else if(Input.GetButton("Right_Bumper") && usingGamepad == true)
       {
-        usingKeyboard = true;
-        usingGamepad = false;
+        usingKeyboard = true; usingGamepad = false;
       }
 
       if(usingGamepad == true)
       {
             if (Input.GetButton("Left_Bumper") && fpsActivated)
             {
+                thirdPersonMainCamera.transform.localPosition = fpsMainCamera.transform.position;
+
                 fpsPlayerController.enabled = false;
                 fpsCameraController.enabled = false;
                 fpsMainCamera.enabled = false;
@@ -44,14 +47,16 @@ public class My_SwitchPOV : MonoBehaviour {
                 thirdPersonMainCamera.enabled = true;
                 thirdPersonController.enabled = true;
                 thirdPersonCamera.enabled = true;
-                bodyRender.enabled = true;
-                headRender.enabled = true;
+                //bodyRender.enabled = true;
+                //headRender.enabled = true;
 
                 fpsActivated = false;
                 thirdPersonActivated = true;
             }
             else if (Input.GetButton("Left_Bumper") && thirdPersonActivated)
             {
+                thirdPersonMainCamera.transform.localPosition = fpsMainCamera.transform.position;
+
                 fpsPlayerController.enabled = true;
                 fpsCameraController.enabled = true;
                 fpsMainCamera.enabled = true;
@@ -59,8 +64,8 @@ public class My_SwitchPOV : MonoBehaviour {
                 thirdPersonCamera.enabled = false;
                 thirdPersonController.enabled = false;
                 thirdPersonCamera.enabled = false;
-                bodyRender.enabled = false;
-                headRender.enabled = false;
+                //bodyRender.enabled = false;
+                //headRender.enabled = false;
 
                 fpsActivated = true;
                 thirdPersonActivated = false;
@@ -70,6 +75,7 @@ public class My_SwitchPOV : MonoBehaviour {
       {
             if (Input.GetKeyDown(KeyCode.Tab) && fpsActivated)
             {
+                thirdPersonMainCamera.transform.localPosition = fpsMainCamera.transform.position;
                 fpsPlayerController.enabled = false;
                 fpsCameraController.enabled = false;
                 fpsMainCamera.enabled = false;
@@ -77,14 +83,15 @@ public class My_SwitchPOV : MonoBehaviour {
                 thirdPersonMainCamera.enabled = true;
                 thirdPersonController.enabled = true;
                 thirdPersonCamera.enabled = true;
-                bodyRender.enabled = true;
-                headRender.enabled = true;
+                //bodyRender.enabled = true;
+                //headRender.enabled = true;
 
                 fpsActivated = false;
                 thirdPersonActivated = true;
             }
             else if (Input.GetKeyDown(KeyCode.Tab) && thirdPersonActivated)
             {
+                thirdPersonMainCamera.transform.localPosition = fpsMainCamera.transform.position;
                 fpsPlayerController.enabled = true;
                 fpsCameraController.enabled = true;
                 fpsMainCamera.enabled = true;
@@ -92,12 +99,13 @@ public class My_SwitchPOV : MonoBehaviour {
                 thirdPersonCamera.enabled = false;
                 thirdPersonController.enabled = false;
                 thirdPersonCamera.enabled = false;
-                bodyRender.enabled = false;
-                headRender.enabled = false;
+                //bodyRender.enabled = false;
+                //headRender.enabled = false;
 
                 fpsActivated = true;
                 thirdPersonActivated = false;
             }
         }
+
 	}
 }

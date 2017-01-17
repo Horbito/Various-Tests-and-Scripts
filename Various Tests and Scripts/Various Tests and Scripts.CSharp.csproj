@@ -92,6 +92,7 @@
     <Compile Include="Assets\Own Stuff\My Scripts\First Person Scripts\My_FPS_PlayerController.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_CharAnimation_Controller.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Consume.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\My_InputMapping.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Interact.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Interactable.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_PickupCollision.cs" />
