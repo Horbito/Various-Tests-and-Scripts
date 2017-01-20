@@ -33,7 +33,7 @@ public class My_CharAnimation_Controller : MonoBehaviour {
         //creates a weapon, in this case the sword, based of what is put in element zero
         //sets the weapon's parent to the variable transform weaponPosition's transform which is an empty child of the sword/weapon bone
         //sets the position and rotation to the empty child so it is in the right orientation
-        if (inputManage.createWeapon && !A_Down)
+        if (inputManage.IM_ButtonA && !A_Down)
         {
             weapon = Instantiate(weapons[0]);
             weapon.transform.SetParent(weaponPosition);
@@ -46,35 +46,35 @@ public class My_CharAnimation_Controller : MonoBehaviour {
         //animations, works ONLY if it is an FBX; REMEMBER TO ALWAYS IMPORT AS AN FBX
         //transitions from no sword to with sword animations
 
-        if (inputManage.giveTakeWeapon && !Y_Down)
+        if (inputManage.IM_ButtonY && !Y_Down)
         {
             animator.SetBool("hasSword", true);
             Y_Down = true;
         }
-        else if (inputManage.giveTakeWeapon && Y_Down && weaponPosition.childCount <= 0)
+        else if (inputManage.IM_ButtonY && Y_Down && weaponPosition.childCount <= 0)
         {
             animator.SetBool("hasSword", false);
             Y_Down = false;
         }
-        else if (inputManage.giveTakeWeapon && weaponPosition.childCount > 0)
+        else if (inputManage.IM_ButtonY && weaponPosition.childCount > 0)
         {
             //cannot go back since the player has a sword
         }
 
         //transitions from sword animation to unseathing animation
-        if (inputManage.unseathe && !B_Down)
+        if (inputManage.IM_ButtonB && !B_Down)
         {
             animator.SetBool("hasSwordOut", true);
             B_Down = true;
         }
-        else if (inputManage.unseathe && B_Down)
+        else if (inputManage.IM_ButtonB && B_Down)
         {
             animator.SetBool("hasSwordOut", false);
             B_Down = false;
         }
 
         //trainsitions from unseathing animation to attacking animation
-        if (inputManage.attack) { animator.SetBool("isAttacking", true); }
+        if (inputManage.IM_ButtonX) { animator.SetBool("isAttacking", true); }
         else { animator.SetBool("isAttacking", false); }
 
     }
