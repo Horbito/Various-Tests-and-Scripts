@@ -23,7 +23,7 @@ public class My_ThirdPersonCamera : MonoBehaviour {
 
     void Start()
     {
-        playerCharacter = this.transform.parent.gameObject;
+        playerCharacter = GameObject.Find("Player");
         switchInput = playerCharacter.GetComponent<My_SwitchPOV>();
         if (lockCursor) //hides the cursor and uses esc to let it become visible
         {

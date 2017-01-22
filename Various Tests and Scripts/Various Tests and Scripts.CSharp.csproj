@@ -95,6 +95,7 @@
     <Compile Include="Assets\Own Stuff\My Scripts\My_InputMapping.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Interact.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Interactable.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\My_NPC_Functions.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_PickupCollision.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_SetScale.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_SwitchPOV.cs" />

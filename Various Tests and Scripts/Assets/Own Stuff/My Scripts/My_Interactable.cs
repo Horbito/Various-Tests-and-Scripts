@@ -7,7 +7,7 @@ public class My_Interactable : MonoBehaviour {
 
     public UnityEvent onHighlight, onDeHighlight, onSelect;
     public float maxRange = 5;
-    bool objectHighlighted = false;
+    protected bool objectHighlighted = false;
 
 	// Use this for initialization
 	void Start () {
