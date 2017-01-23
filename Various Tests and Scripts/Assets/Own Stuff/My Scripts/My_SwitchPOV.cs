@@ -5,14 +5,16 @@ using UnityEngine;
 public class My_SwitchPOV : MonoBehaviour {
 
     //use this script to switch between POV
-    public My_FPS_PlayerController fpsPlayerController;
-    public My_FPS_CameraController fpsCameraController;
+    
     public My_InputGamepad_Controller thirdPersonController;
     public My_ThirdPersonCamera thirdPersonCamera;
-    public SkinnedMeshRenderer bodyRender;
-    public SkinnedMeshRenderer headRender;
-    public Camera fpsMainCamera;
-    public Camera thirdPersonMainCamera;
+
+    //public My_FPS_PlayerController fpsPlayerController;
+    //public My_FPS_CameraController fpsCameraController;
+    //public SkinnedMeshRenderer bodyRender;
+    //public SkinnedMeshRenderer headRender;
+    //public Camera fpsMainCamera;
+    //public Camera thirdPersonMainCamera;
 
     bool fpsActivated = true;
     bool thirdPersonActivated;
@@ -23,17 +25,19 @@ public class My_SwitchPOV : MonoBehaviour {
     void Update ()
     {
       if(usingKeyboard == true) { usingGamepad = false; }
-      if(usingGamepad == true){ usingKeyboard = false;}
+      if(usingGamepad == true){ usingKeyboard = false; }
 
-      if(Input.GetKey(KeyCode.Alpha1) && usingKeyboard == true)
-      {
-        usingKeyboard = false; usingGamepad = true;
-      }
-      else if(Input.GetButton("Right_Bumper") && usingGamepad == true)
-      {
-        usingKeyboard = true; usingGamepad = false;
-      }
+      if (Cursor.lockState == CursorLockMode.Locked && Input.GetKeyDown(KeyCode.Escape)) { Cursor.lockState = CursorLockMode.None; Cursor.visible = true; }
+      if (Cursor.lockState == CursorLockMode.None && Input.GetKeyDown(KeyCode.Escape)) { Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
 
+      if(Input.GetKey(KeyCode.Tab) && usingKeyboard == true) { usingKeyboard = false; usingGamepad = true; }
+      else if(Input.GetButton("Right_Bumper") && usingGamepad == true) { usingKeyboard = true; usingGamepad = false; }
+
+
+      /////////////////////////////////////////////////////////////////////////////
+                         /// Used for Switching the POV ///
+      /////////////////////////////////////////////////////////////////////////////
+      /*
       if(usingGamepad == true)
       {
             if (Input.GetButton("Left_Bumper") && fpsActivated)
@@ -106,6 +110,6 @@ public class My_SwitchPOV : MonoBehaviour {
                 thirdPersonActivated = false;
             }
         }
-
+      */
 	}
 }

@@ -44,8 +44,8 @@ public class My_CharAnimation_Controller : MonoBehaviour {
 
         //animationFunction("Y_Button", Y_Down, "hasSword");
         //animations, works ONLY if it is an FBX; REMEMBER TO ALWAYS IMPORT AS AN FBX
+        
         //transitions from no sword to with sword animations
-
         if (inputManage.IM_ButtonY && !Y_Down)
         {
             animator.SetBool("hasSword", true);

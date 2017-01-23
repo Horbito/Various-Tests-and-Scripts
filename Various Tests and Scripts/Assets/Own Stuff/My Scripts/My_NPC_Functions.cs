@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class My_NPC_Functions : MonoBehaviour {
-
     public UnityEvent npcEvents;
 
+    public string[] npcDialogue;
+    public string npcName;
+
     // example of how to use custom events in the inspector for UnityEvents
-    public void saySomething(string dialouge)
+    public void saySomething()
     {
-        //GUI.Label(new Rect())
-        print(dialouge);
-        npcEvents.Invoke();    
+        My_DialogueSystem.Instance.AddNewDialogue(npcDialogue, npcName);
     }
 
 }

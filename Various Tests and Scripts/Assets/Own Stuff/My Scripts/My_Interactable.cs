@@ -9,9 +9,5 @@ public class My_Interactable : MonoBehaviour {
     public float maxRange = 5;
     protected bool objectHighlighted = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 
 }

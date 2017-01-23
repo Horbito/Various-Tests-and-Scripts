@@ -19,7 +19,6 @@ public class My_Interact : MonoBehaviour {
         My_Interactable interactableHit = null;
         Transform mainCameraTransform = Camera.main.transform;
 
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); //Z coordinate is ignored, bottom left is (0,0) and top-right is (1,1)
         Ray ray2 = new Ray(mainCameraTransform.position, mainCameraTransform.TransformDirection(Vector3.forward));
         //Debug.DrawRay(Camera.main.transform.position, Vector3.forward, Color.red);
         Debug.DrawRay(mainCameraTransform.position, mainCameraTransform.TransformDirection(Vector3.forward), Color.red);
@@ -33,7 +32,7 @@ public class My_Interact : MonoBehaviour {
             if ((interactableHit != null) && (hitInfo.distance > interactableHit.maxRange)) //runs if the object has the transform component
             {
                 interactableHit = null; //sets the interactable hit to null which means it cannot be interacted with
-                Debug.Log("I am hitting something with this ray");
+                //Debug.Log("I am hitting something with this ray");
             }
         }
 
@@ -53,22 +52,11 @@ public class My_Interact : MonoBehaviour {
             }
         }
 
-        
-        if (switchInput.usingGamepad == true)
-        {
-            if(inputManage.IM_ButtonA && (interactableObject != null))
-            {
-                interactableObject.onSelect.Invoke();
-                Debug.Log("I am interacting with this");
-            }
-        }
-        
-        /*
-        if(Input.GetButton("A_Button") && (interactableObject != null))
+        if(inputManage.IM_ButtonA && (interactableObject != null))
         {
             interactableObject.onSelect.Invoke();
             Debug.Log(" I am interacting with this");
         }
-        */
+       
     }
 }
