@@ -16,6 +16,8 @@ public class My_InputGamepad_Controller : MonoBehaviour {
     float speedSmoothVelocity; //variable that the smoothness function can reference to manipulate
     float currentSpeed; //sets a current speed for a startin point for the smoothness
 
+    public float animationSpeedPercent;
+
     Animator animator;
     GameObject thePlayer;
     My_InputMapping inputMapping;
@@ -53,7 +55,7 @@ public class My_InputGamepad_Controller : MonoBehaviour {
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
         //makes a variable to change the "speedPercent" which changes the animation, if isRunning is true will set speedPercent to 1 which will correspond to the run animation
-        float animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude;
+        animationSpeedPercent = ((isRunning) ? 1 : .5f) * inputDirection.magnitude;
         animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime); //smooths animation
 
     }

@@ -30,7 +30,7 @@ public class My_InputMapping : MonoBehaviour {
     void Update()
     {
         //Buttons for character animation controller
-        IM_ButtonA = ((switchInput.usingKeyboard) ? Input.GetKey(KeyCode.E) : Input.GetButtonDown("A_Button")); //create weapon
+        IM_ButtonA = ((switchInput.usingKeyboard) ? Input.GetKeyDown(KeyCode.E) : Input.GetButtonDown("A_Button")); //create weapon
         IM_ButtonY = ((switchInput.usingKeyboard) ? Input.GetKey(KeyCode.Alpha2) : Input.GetButtonDown("Y_Button")); //give Take Weapon
         IM_ButtonB = ((switchInput.usingKeyboard) ? Input.GetKey(KeyCode.F) : Input.GetButtonDown("B_Button")); //unseathe
         IM_ButtonX = ((switchInput.usingKeyboard) ? Input.GetMouseButtonDown(0) : Input.GetButton("X_Button")); //attack

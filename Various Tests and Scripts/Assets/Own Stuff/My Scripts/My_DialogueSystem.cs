@@ -10,14 +10,30 @@ public class My_DialogueSystem : MonoBehaviour {
     public List<string> dialogueLines = new List<string>(); //creates a new list of type string 
 
     Button continueButton;
+    Button exitButton;
     Text dialogueText, nameText;
+    GameObject myEventSystem, exitButtonGameObject, continueButtonGameObject;
+    My_InputMapping inputMange;
+    My_Interact interactMange;
+    My_InputGamepad_Controller playerInputs;
     int dialogueIndex;
 
 	void Awake () {
-        continueButton = dialoguePanel.transform.FindChild("Continue").GetComponent<Button>();
-        dialogueText = dialoguePanel.transform.FindChild("Text").GetComponent<Text>();
-        nameText = dialoguePanel.transform.FindChild("Name").FindChild("Text").GetComponent<Text>();
-        dialoguePanel.SetActive(false);
+        inputMange = GameObject.Find("Player").GetComponent<My_InputMapping>();
+        interactMange = GameObject.Find("Player").GetComponent<My_Interact>();
+        playerInputs = GameObject.Find("Player").transform.GetComponent<My_InputGamepad_Controller>();
+
+        myEventSystem = GameObject.Find("EventSystem");
+        continueButtonGameObject = GameObject.Find("Continue");  //gameobject, not the component; used to continue the dialogue
+        exitButtonGameObject = GameObject.Find("Exit"); //gameobject, not the component; used to stop the dialogue
+
+        //all children of the dialogue panel set in the inspector
+        continueButton = dialoguePanel.transform.FindChild("Continue").GetComponent<Button>(); //gets the button component of the gameobject "Continue"
+        exitButton = dialoguePanel.transform.FindChild("Exit").GetComponent<Button>(); //gets the button component of the gameobject "Exit"
+        dialogueText = dialoguePanel.transform.FindChild("Text").GetComponent<Text>(); // gets the text compoonent of the gameobject "Text"
+        nameText = dialoguePanel.transform.FindChild("Name").FindChild("Text").GetComponent<Text>(); //gets the text component of the gameobject "Name"
+
+        dialoguePanel.SetActive(false); //intially sets the dialogue panel and all its children to false
 
 		if(Instance != null && Instance != this) //runs if there is an existing dialouge system and it is not this "one"
         {
@@ -31,28 +47,44 @@ public class My_DialogueSystem : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        //if the currentselected object is the continue button gameobject
+        if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == continueButtonGameObject)
         {
-            ContinueDialogue();
+            if (inputMange.IM_ButtonA) { ContinueDialogue(); } //if the A button is pressed, activates the continue dialogue function
+        }
+
+        //if the currentselected object is the exit button gameobject
+        if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == exitButtonGameObject)
+        {
+            if (inputMange.IM_ButtonA) { BreakDialogue(); } //if the A button is pressed, actiavtes the break dialogue function
         }
     }
 
 
     public void AddNewDialogue(string[] lines, string npcName)
     {
+        playerInputs.animationSpeedPercent = 0;
+        playerInputs.enabled = false;
         dialogueIndex = 0; //sets the index to 0 because the first element of an index is 0
         dialogueLines = new List<string>(lines.Length); //assigns the dialogue lines to a list of strings comprised of the length/number of lines
         dialogueLines.AddRange(lines); //adds the dialogue
         this.npcName = npcName; //sets this instance's name to the npcName we give it
-        Debug.Log(dialogueLines.Count); // counts the number of lines we have
+        //Debug.Log(dialogueLines.Count); // counts the number of lines we have
         CreateDialogue(); //creates the initial dialogue
     }
 
     public void CreateDialogue()
     {
+        playerInputs.animationSpeedPercent = 0;
+        playerInputs.enabled = false;
+        interactMange.enabled = false; //interaction raycasts were interferring with the dialogue, set interactions back to true once dialogue is done
         dialogueText.text = dialogueLines[dialogueIndex]; //displays whichever numbered index the dialouge index is set to which is 0
         nameText.text = npcName; //sets the text of the NPC to the npcName we give it
         dialoguePanel.SetActive(true); //turns on the dialogue panel
+
+        //sets the event system selected game object to the continue button first
+        myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Continue"));
+
         Cursor.lockState = CursorLockMode.None; // makes sure the curosor is not restrained
         Cursor.visible = true; //makes sure the cursor is visible
     }
@@ -61,14 +93,30 @@ public class My_DialogueSystem : MonoBehaviour {
     {
         if (dialogueIndex < dialogueLines.Count - 1) //if there is still more dialogue lines than we have in the index
         {
+            playerInputs.animationSpeedPercent = 0;
+            playerInputs.enabled = false;
+            interactMange.enabled = false; //have to disable interactions when in a dialogue so it does not interfere with the continue button
             dialogueIndex++; //increases the index to the next number
             dialogueText.text = dialogueLines[dialogueIndex]; //sets the next dialogue to the next index
         }
         else //if there are no more lines
         {
+            playerInputs.enabled = true;
+            interactMange.enabled = true; //interaction raycasts were interferring with the dialogue, set interactions back to true once dialogue is done
             dialoguePanel.SetActive(false);
+            myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+    }
+
+    public void BreakDialogue()
+    {
+        playerInputs.enabled = true;
+        interactMange.enabled = true; //interaction raycasts were interferring with the dialogue, set interactions back to true once dialogue is done
+        dialoguePanel.SetActive(false);
+        myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

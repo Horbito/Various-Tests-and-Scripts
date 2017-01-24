@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class My_NPC_Functions : MonoBehaviour {
-    public UnityEvent npcEvents;
-
     public string[] npcDialogue;
     public string npcName;
 

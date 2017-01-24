@@ -15,8 +15,8 @@ public class My_SwitchPOV : MonoBehaviour {
     //public SkinnedMeshRenderer headRender;
     //public Camera fpsMainCamera;
     //public Camera thirdPersonMainCamera;
+    //bool fpsActivated = true;
 
-    bool fpsActivated = true;
     bool thirdPersonActivated;
 
     public bool usingKeyboard = false;

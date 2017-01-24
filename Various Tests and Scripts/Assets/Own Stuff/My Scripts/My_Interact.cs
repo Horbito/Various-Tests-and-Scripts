@@ -5,12 +5,10 @@ using UnityEngine;
 public class My_Interact : MonoBehaviour {
 
     public My_Interactable interactableObject;
-    My_SwitchPOV switchInput;
     My_InputMapping inputManage;
 
     void Start()
     {
-        switchInput = this.gameObject.GetComponent<My_SwitchPOV>();
         inputManage = this.gameObject.GetComponent<My_InputMapping>();
     }
 

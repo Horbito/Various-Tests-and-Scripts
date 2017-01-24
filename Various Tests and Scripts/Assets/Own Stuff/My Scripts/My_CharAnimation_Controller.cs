@@ -16,14 +16,12 @@ public class My_CharAnimation_Controller : MonoBehaviour {
     GameObject playerCharacter;
     GameObject weapon;
     Animator animator;
-    My_SwitchPOV switchInput;
     My_InputMapping inputManage;
 
     // Use this for initialization
     void Start ()
     {
         playerCharacter = this.gameObject;
-        switchInput = playerCharacter.GetComponent<My_SwitchPOV>();
         inputManage = playerCharacter.GetComponent<My_InputMapping>();
         animator = GetComponent<Animator>();
     }
