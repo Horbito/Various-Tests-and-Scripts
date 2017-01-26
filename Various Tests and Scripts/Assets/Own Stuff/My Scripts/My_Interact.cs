@@ -6,6 +6,7 @@ public class My_Interact : MonoBehaviour {
 
     public My_Interactable interactableObject;
     My_InputMapping inputManage;
+    public RaycastHit hitInfo;
 
     void Start()
     {
@@ -20,8 +21,8 @@ public class My_Interact : MonoBehaviour {
         Ray ray2 = new Ray(mainCameraTransform.position, mainCameraTransform.TransformDirection(Vector3.forward));
         //Debug.DrawRay(Camera.main.transform.position, Vector3.forward, Color.red);
         Debug.DrawRay(mainCameraTransform.position, mainCameraTransform.TransformDirection(Vector3.forward), Color.red);
-        RaycastHit hitInfo;
-
+        //RaycastHit hitInfo;
+        
         //cast a ray from the ray specificed then gets the info from out hitInfo from the object which the ray hit
         //if (Physics.Raycast(mainCameraTransform.position, mainCameraTransform.TransformDirection(Vector3.forward), out hitInfo, 50.0f))
         if(Physics.Raycast(ray2, out hitInfo))

@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class My_DialogueSystem : MonoBehaviour {
+public class My_DialogueSystem_WithOptions : MonoBehaviour {
+    /*
 
     public static My_DialogueSystem Instance { get; set; }
     public GameObject dialoguePanel;
@@ -16,19 +16,35 @@ public class My_DialogueSystem : MonoBehaviour {
     Text dialogueText, nameText;
     GameObject myEventSystem, exitButtonGameObject, continueButtonGameObject;
 
+    GameObject optionOneGameObj, optionTwoGameObj, optionThreeGameObj, optionFourGameObj, optionsHolder;
+    Button optionOne, optionTwo, optionThree, optionFour;
+
     Animator playerAnimator;
     My_InputMapping inputMange;
     My_Interact interactMange;
     My_InputGamepad_Controller playerInputs;
     My_NPC_Functions npcFunctions;
 
-	void Awake () {
+    void Awake()
+    {
         inputMange = GameObject.Find("Player").GetComponent<My_InputMapping>();
         interactMange = GameObject.Find("Player").GetComponent<My_Interact>();
         playerInputs = GameObject.Find("Player").transform.GetComponent<My_InputGamepad_Controller>();
         playerAnimator = GameObject.Find("Player").transform.GetComponent<Animator>();
 
+        //finds the options for dialogue and their button components
+        optionOne = dialoguePanel.transform.FindChild("Options").FindChild("Option 1").GetComponent<Button>();
+        optionTwo = dialoguePanel.transform.FindChild("Options").FindChild("Option 2").GetComponent<Button>();
+        optionThree = dialoguePanel.transform.FindChild("Options").FindChild("Option 3").GetComponent<Button>();
+        optionFour = dialoguePanel.transform.FindChild("Options").FindChild("Option 4").GetComponent<Button>();
+
+        optionOneGameObj = GameObject.Find("Option 1");
+        optionTwoGameObj = GameObject.Find("Option 2");
+        optionThreeGameObj = GameObject.Find("Option 3");
+        optionFourGameObj = GameObject.Find("Option 4");
+
         myEventSystem = GameObject.Find("EventSystem");
+        optionsHolder = GameObject.Find("Options");
         continueButtonGameObject = GameObject.Find("Continue");  //gameobject, not the component; used to continue the dialogue
         exitButtonGameObject = GameObject.Find("Exit"); //gameobject, not the component; used to stop the dialogue
 
@@ -40,7 +56,7 @@ public class My_DialogueSystem : MonoBehaviour {
 
         dialoguePanel.SetActive(false); //intially sets the dialogue panel and all its children to false
 
-		if(Instance != null && Instance != this) //runs if there is an existing dialouge system and it is not this "one"
+        if (Instance != null && Instance != this) //runs if there is an existing dialouge system and it is not this "one"
         {
             Destroy(gameObject); //if the statement is true, it destroys the instance of the object so it does not conflict
         }
@@ -48,7 +64,7 @@ public class My_DialogueSystem : MonoBehaviour {
         {
             Instance = this; //if there is not an exisiting instance, set it to this one
         }
-	}
+    }
 
     void Update()
     {
@@ -58,6 +74,21 @@ public class My_DialogueSystem : MonoBehaviour {
         if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == continueButtonGameObject)
         {
             if (inputMange.IM_ButtonA) { ContinueDialogue(); } //if the A button is pressed, activates the continue dialogue function
+        }
+        else if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == optionOneGameObj)
+        {
+            if (inputMange.IM_ButtonA)
+            {
+                ContinueDialogue();
+                ContinueExitButtons();
+            }
+        }
+        else if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == optionTwoGameObj)
+        {
+            if (inputMange.IM_ButtonA)
+            {
+                BreakDialogue();
+            }
         }
         else if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == exitButtonGameObject)
         {
@@ -82,6 +113,7 @@ public class My_DialogueSystem : MonoBehaviour {
         playerAnimator.SetFloat("speedPercent", 0.0f);
         playerInputs.enabled = false;
         interactMange.enabled = false; //interaction raycasts were interferring with the dialogue, set interactions back to true once dialogue is done
+        optionsHolder.SetActive(false);
         continueButtonGameObject.SetActive(true);
         exitButtonGameObject.SetActive(true);
 
@@ -105,6 +137,10 @@ public class My_DialogueSystem : MonoBehaviour {
             interactMange.enabled = false; //have to disable interactions when in a dialogue so it does not interfere with the continue button
             dialogueIndex++; //increases the index to the next number
             dialogueText.text = dialogueLines[dialogueIndex]; //sets the next dialogue to the next index
+            if (dialogueIndex == npcFunctions.dialogueLineNumberOption[0] || dialogueIndex == npcFunctions.dialogueLineNumberOption[1] || dialogueIndex == npcFunctions.dialogueLineNumberOption[2] || dialogueIndex == npcFunctions.dialogueLineNumberOption[3])
+            {
+                OptionsButtons();
+            }
         }
         else //if there are no more lines
         {
@@ -126,4 +162,22 @@ public class My_DialogueSystem : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
+    public void OptionsButtons()
+    {
+        optionsHolder.SetActive(true);
+        continueButtonGameObject.SetActive(false);
+        exitButtonGameObject.SetActive(false);
+        myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Option 1"));
+    }
+
+    public void ContinueExitButtons()
+    {
+        optionsHolder.SetActive(false);
+        continueButtonGameObject.SetActive(true);
+        exitButtonGameObject.SetActive(true);
+        myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Continue"));
+    }
+    */
 }
+
