@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -100,6 +98,7 @@
     <Compile Include="Assets\Own Stuff\My Scripts\My_InputMapping.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Interact.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_Interactable.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\My_NPC_DialogueHost.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_NPC_Functions.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_SetScale.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\My_SwitchPOV.cs" />
@@ -108,6 +107,9 @@
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\First Person Scripts\My_FPS_PlayerController.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\Gamepad_Controller.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_Consume.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_NoOptions.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_WithOptions.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_WithOptions2.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_Gamepad_PlayerController.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_PickupCollision.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_simpleNPCFunctions.cs" />
@@ -177,9 +179,7 @@
     <None Include="Assets\Lux 2.01 Personal\_Lux 01 Readme.txt" />
     <None Include="Assets\Lux 2.01 Personal\_Lux 02 Documentaton.txt" />
     <None Include="Assets\Lux 2.01 Personal\_Lux 03 ChangeLog.txt" />
-    <None Include="Assets\Own Stuff\My Scripts\NPC_One_Dialogue.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Own Stuff\My Scripts\TextFile1.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

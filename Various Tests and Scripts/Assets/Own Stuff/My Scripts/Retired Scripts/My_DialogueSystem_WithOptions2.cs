@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class My_DialogueSystem : MonoBehaviour {
-
+public class My_DialogueSystem_WithOptions2 : MonoBehaviour
+{
+    /*
     public static My_DialogueSystem Instance { get; set; }
     public GameObject dialoguePanel;
     public string npcName;
     public List<string> dialogueLines = new List<string>(); //creates a new list of type string 
-
     int dialogueIndex;
 
     Button continueButton, exitButton;
-    Text dialogueText, nameText;
+    public Text dialogueText;
+    Text nameText;
     GameObject myEventSystem, exitButtonGameObject, continueButtonGameObject;
+    TextAsset dummy;
 
     GameObject optionOneGameObj, optionTwoGameObj, optionThreeGameObj, optionFourGameObj, optionsHolder;
     Button optionOne, optionTwo, optionThree, optionFour;
@@ -23,7 +25,7 @@ public class My_DialogueSystem : MonoBehaviour {
     My_InputMapping inputMange;
     My_Interact interactMange;
     My_InputGamepad_Controller playerInputs;
-    My_NPC_DialogueHost npcDialogueHost;
+    My_NPC_Functions npcFunctions;
 
     void Awake()
     {
@@ -68,7 +70,7 @@ public class My_DialogueSystem : MonoBehaviour {
 
     void Update()
     {
-        npcDialogueHost = interactMange.hitInfo.transform.GetComponent<My_NPC_DialogueHost>(); //needs to consitinely check to which NPC Function component it needs to be set to
+        npcFunctions = interactMange.hitInfo.transform.GetComponent<My_NPC_Functions>(); //needs to consitinely check to which NPC Function component it needs to be set to
 
         //if the currentselected object is the continue button gameobject
         if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == continueButtonGameObject)
@@ -79,7 +81,8 @@ public class My_DialogueSystem : MonoBehaviour {
         {
             if (inputMange.IM_ButtonA)
             {
-                dialogueIndex = npcDialogueHost.dialogueOptionStartLine[0]; //position in the array (line number) - 2
+                OptionsButtons();
+                npcFunctions.textFile = npcFunctions.textFileOptionOne;
                 ContinueDialogue();
                 ContinueExitButtons();
             }
@@ -88,9 +91,7 @@ public class My_DialogueSystem : MonoBehaviour {
         {
             if (inputMange.IM_ButtonA)
             {
-                dialogueIndex = npcDialogueHost.dialogueOptionStartLine[1]; //position in the array (line number) - 2
-                ContinueDialogue();
-                ContinueExitButtons();
+                BreakDialogue();
             }
         }
         else if (myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == exitButtonGameObject)
@@ -103,7 +104,7 @@ public class My_DialogueSystem : MonoBehaviour {
     public void AddNewDialogue(string[] lines, string npcName)
     {
         playerInputs.enabled = false;
-        dialogueIndex = 1; //sets the index to 0 because the first element of an index is 0
+        dialogueIndex = 0; //sets the index to 0 because the first element of an index is 0
         dialogueLines = new List<string>(lines.Length); //assigns the dialogue lines to a list of strings comprised of the length/number of lines
         dialogueLines.AddRange(lines); //adds the dialogue
         this.npcName = npcName; //sets this instance's name to the npcName we give it
@@ -140,7 +141,7 @@ public class My_DialogueSystem : MonoBehaviour {
             interactMange.enabled = false; //have to disable interactions when in a dialogue so it does not interfere with the continue button
             dialogueIndex++; //increases the index to the next number
             dialogueText.text = dialogueLines[dialogueIndex]; //sets the next dialogue to the next index
-            if (dialogueIndex == npcDialogueHost.dialogueOpenOptions[0] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[1] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[2] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[3])
+            if (dialogueIndex == npcFunctions.dialogueLineNumberOption[0] || dialogueIndex == npcFunctions.dialogueLineNumberOption[1] || dialogueIndex == npcFunctions.dialogueLineNumberOption[2] || dialogueIndex == npcFunctions.dialogueLineNumberOption[3])
             {
                 OptionsButtons();
             }
@@ -181,4 +182,5 @@ public class My_DialogueSystem : MonoBehaviour {
         exitButtonGameObject.SetActive(true);
         myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Continue"));
     }
+    */
 }
