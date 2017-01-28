@@ -18,6 +18,7 @@ public class My_DialogueSystem : MonoBehaviour {
 
     GameObject optionOneGameObj, optionTwoGameObj, optionThreeGameObj, optionFourGameObj, optionsHolder;
     Button optionOne, optionTwo, optionThree, optionFour;
+    public Text optionOneText, optionTwoText, optionThreeText, optionFourText;
 
     Animator playerAnimator;
     My_InputMapping inputMange;
@@ -42,6 +43,11 @@ public class My_DialogueSystem : MonoBehaviour {
         optionTwoGameObj = GameObject.Find("Option 2");
         optionThreeGameObj = GameObject.Find("Option 3");
         optionFourGameObj = GameObject.Find("Option 4");
+
+        optionOneText = dialoguePanel.transform.FindChild("Options").FindChild("Option 1").FindChild("Text").GetComponent<Text>();
+        optionTwoText = dialoguePanel.transform.FindChild("Options").FindChild("Option 2").FindChild("Text").GetComponent<Text>();
+        optionThreeText = dialoguePanel.transform.FindChild("Options").FindChild("Option 3").FindChild("Text").GetComponent<Text>();
+        optionFourText = dialoguePanel.transform.FindChild("Options").FindChild("Option 4").FindChild("Text").GetComponent<Text>();
 
         myEventSystem = GameObject.Find("EventSystem");
         optionsHolder = GameObject.Find("Options");
@@ -80,6 +86,7 @@ public class My_DialogueSystem : MonoBehaviour {
             if (inputMange.IM_ButtonA)
             {
                 dialogueIndex = npcDialogueHost.dialogueOptionStartLine[0]; //position in the array (line number) - 2
+                npcDialogueHost.endLineEarly = npcDialogueHost.endLineEarly - 1;
                 ContinueDialogue();
                 ContinueExitButtons();
             }
@@ -97,13 +104,18 @@ public class My_DialogueSystem : MonoBehaviour {
         {
             if (inputMange.IM_ButtonA) { BreakDialogue(); } //if the A button is pressed, actiavtes the break dialogue function
         }
+
+        if (dialogueIndex > npcDialogueHost.endLineEarly)
+        {
+            BreakDialogue();
+        }
     }
 
 
     public void AddNewDialogue(string[] lines, string npcName)
     {
         playerInputs.enabled = false;
-        dialogueIndex = 1; //sets the index to 0 because the first element of an index is 0
+        dialogueIndex = 1; //sets the index to 0 because the first element of an index is 0, REMEMBER THAT OUT OF RANGE INDEX ERROR WILL OCCUR IF THERE IS NOT A LINE AT 2
         dialogueLines = new List<string>(lines.Length); //assigns the dialogue lines to a list of strings comprised of the length/number of lines
         dialogueLines.AddRange(lines); //adds the dialogue
         this.npcName = npcName; //sets this instance's name to the npcName we give it
@@ -140,10 +152,24 @@ public class My_DialogueSystem : MonoBehaviour {
             interactMange.enabled = false; //have to disable interactions when in a dialogue so it does not interfere with the continue button
             dialogueIndex++; //increases the index to the next number
             dialogueText.text = dialogueLines[dialogueIndex]; //sets the next dialogue to the next index
-            if (dialogueIndex == npcDialogueHost.dialogueOpenOptions[0] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[1] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[2] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[3])
+            /*
+            for (int i = 0; i < npcDialogueHost.dialogueOpenOptions.Length; i++)
             {
-                OptionsButtons();
+                if (i == npcDialogueHost.dialogueOpenOptions[i])
+                {
+                    OptionsButtons();
+                }
             }
+            */
+            if (npcDialogueHost.dialogueOpenOptions.Length > 0)
+            {
+                //if((dialogueIndex == npcDialogueHost.dialogueOpenOptions[0] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[1] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[2] || dialogueIndex == npcDialogueHost.dialogueOpenOptions[3]))
+                if (npcDialogueHost.dialogueOpenOptions[0] == dialogueIndex || npcDialogueHost.dialogueOpenOptions[1] == dialogueIndex || npcDialogueHost.dialogueOpenOptions[2] == dialogueIndex || npcDialogueHost.dialogueOpenOptions[3] == dialogueIndex)
+                {
+                    OptionsButtons();
+                }
+            }
+            
         }
         else //if there are no more lines
         {
@@ -158,6 +184,7 @@ public class My_DialogueSystem : MonoBehaviour {
 
     public void BreakDialogue()
     {
+        dialogueIndex = 0;
         playerInputs.enabled = true;
         interactMange.enabled = true; //interaction raycasts were interferring with the dialogue, set interactions back to true once dialogue is done
         dialoguePanel.SetActive(false);
