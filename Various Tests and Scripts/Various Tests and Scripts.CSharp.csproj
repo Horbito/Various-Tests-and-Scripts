@@ -107,12 +107,10 @@
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\First Person Scripts\My_FPS_PlayerController.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\Gamepad_Controller.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_Consume.cs" />
-    <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_NoOptions.cs" />
-    <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_WithOptions.cs" />
-    <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_WithOptions2.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_Gamepad_PlayerController.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_PickupCollision.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_simpleNPCFunctions.cs" />
+    <Compile Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_xml_DialogueContainer.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Third Person Scripts\My_InputGamepad_Controller.cs" />
     <Compile Include="Assets\Own Stuff\My Scripts\Third Person Scripts\My_ThirdPersonCamera.cs" />
     <Compile Include="Assets\Sebatian Lague Assets\SL Tutorials\SL_PlayerController.cs" />
@@ -179,6 +177,12 @@
     <None Include="Assets\Lux 2.01 Personal\_Lux 01 Readme.txt" />
     <None Include="Assets\Lux 2.01 Personal\_Lux 02 Documentaton.txt" />
     <None Include="Assets\Lux 2.01 Personal\_Lux 03 ChangeLog.txt" />
+    <None Include="Assets\Own Stuff\My Scripts\Retired Scripts\DialogueIdStorage.xml" />
+    <None Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_NoOptions.txt" />
+    <None Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_WithOptions.txt" />
+    <None Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_WithOptions2.txt" />
+    <None Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_DialogueSystem_WithOptions3.txt" />
+    <None Include="Assets\Own Stuff\My Scripts\Retired Scripts\My_NPC_DialogueHost_ForOptions.txt" />
     <None Include="Assets\Own Stuff\My Scripts\TextFile1.txt" />
     <None Include="Assets\Own Stuff\My Scripts\TextFile2.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

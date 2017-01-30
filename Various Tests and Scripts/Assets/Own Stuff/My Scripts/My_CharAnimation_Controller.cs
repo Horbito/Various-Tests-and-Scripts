@@ -16,7 +16,9 @@ public class My_CharAnimation_Controller : MonoBehaviour {
     GameObject playerCharacter;
     GameObject weapon;
     Animator animator;
+    My_SwitchPOV switchManage;
     My_InputMapping inputManage;
+    My_ThirdPersonCamera thirdPersonCamera;
 
     // Use this for initialization
     void Start ()
@@ -24,6 +26,8 @@ public class My_CharAnimation_Controller : MonoBehaviour {
         playerCharacter = this.gameObject;
         inputManage = playerCharacter.GetComponent<My_InputMapping>();
         animator = GetComponent<Animator>();
+        thirdPersonCamera = Camera.main.GetComponent<My_ThirdPersonCamera>();
+        switchManage = playerCharacter.GetComponent<My_SwitchPOV>();
     }
 
     void Update()
@@ -64,16 +68,17 @@ public class My_CharAnimation_Controller : MonoBehaviour {
         {
             animator.SetBool("hasSwordOut", true);
             B_Down = true;
+            switchManage.combatMode = true;
         }
         else if (inputManage.IM_ButtonB && B_Down)
         {
             animator.SetBool("hasSwordOut", false);
             B_Down = false;
+            switchManage.combatMode = false;
         }
 
         //trainsitions from unseathing animation to attacking animation
         if (inputManage.IM_ButtonX) { animator.SetBool("isAttacking", true); }
         else { animator.SetBool("isAttacking", false); }
-
     }
 }

@@ -1,20 +1,22 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class My_DialogueSystem_WithOptions : MonoBehaviour {
-    /*
-
+public class My_DialogueSystem_WithOptions2 : MonoBehaviour
+{
+    
     public static My_DialogueSystem Instance { get; set; }
     public GameObject dialoguePanel;
     public string npcName;
     public List<string> dialogueLines = new List<string>(); //creates a new list of type string 
-
     int dialogueIndex;
 
     Button continueButton, exitButton;
-    Text dialogueText, nameText;
+    public Text dialogueText;
+    Text nameText;
     GameObject myEventSystem, exitButtonGameObject, continueButtonGameObject;
+    TextAsset dummy;
 
     GameObject optionOneGameObj, optionTwoGameObj, optionThreeGameObj, optionFourGameObj, optionsHolder;
     Button optionOne, optionTwo, optionThree, optionFour;
@@ -79,6 +81,8 @@ public class My_DialogueSystem_WithOptions : MonoBehaviour {
         {
             if (inputMange.IM_ButtonA)
             {
+                OptionsButtons();
+                npcFunctions.textFile = npcFunctions.textFileOptionOne;
                 ContinueDialogue();
                 ContinueExitButtons();
             }
@@ -178,6 +182,5 @@ public class My_DialogueSystem_WithOptions : MonoBehaviour {
         exitButtonGameObject.SetActive(true);
         myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Continue"));
     }
-    */
+    
 }
-

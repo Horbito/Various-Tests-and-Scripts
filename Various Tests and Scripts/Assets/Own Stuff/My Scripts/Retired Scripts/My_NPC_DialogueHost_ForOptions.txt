@@ -1,0 +1,112 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Xml;
+
+public class My_NPC_DialogueHost_ForOptions : MonoBehaviour {
+
+    public string npcName;
+    public TextAsset dialogueLinesFile;
+    public TextAsset dialogueAfterLinesFile;
+    public TextAsset dialogueChoiceTest;
+    [HideInInspector] //hides the dialogue lines in the inspector
+    public string[] npcDialogueLines;
+    [HideInInspector] //hides the npcAfterDialogueLines lines in the inspector
+    public string[] npcAfterDialogueLines;
+    [HideInInspector]
+    public string[] npcDialogueChoiceTest;
+    public int[] dialogueOpenOptions; //used originally with options in the dialogue system, used with EXACT line numbering
+
+    [HideInInspector] //hides the endLineEarly in the inspector
+    public int endLineEarly = 1000;
+    public int optionOneEndLine = 100;
+    public int optionTwoEndLine = 100;
+    public int[] dialogueOptionStartLine;
+    bool adjustedLineNumbers;
+    bool alreadyTalked;
+
+    XmlDocument xmlDoc;
+    public XmlNode node;
+    public XmlNode xmlRoot;
+    public XmlNodeList xmlNodeList;
+
+    public string dataPath;
+    public string selectNodes, selectSingleNode;
+    public string selectSingleNode1, selectSingleNode2, changeInnerText;
+
+    void Update()
+    {
+        if (dialogueLinesFile != null)
+        {
+            npcDialogueLines = (dialogueLinesFile.text.Split('\n'));
+        }
+        if (dialogueAfterLinesFile != null)
+        {
+            npcAfterDialogueLines = (dialogueAfterLinesFile.text.Split('\n'));
+        }
+
+    }
+
+    // example of how to use custom events in the inspector for UnityEvents
+    public void saySomething()
+    {
+        readXmlFile();
+        if (adjustedLineNumbers == false)
+        {
+            //endLineEarly = endLineEarly - 1;
+            for (int i = 0; i < dialogueOpenOptions.Length; i++)
+            {
+                dialogueOpenOptions[i] = dialogueOpenOptions[i] - 1;
+            }
+
+            for (int i = 0; i < dialogueOptionStartLine.Length; i++)
+            {
+                dialogueOptionStartLine[i] = dialogueOptionStartLine[i] - 2;
+            }
+            adjustedLineNumbers = true;
+        }
+        else if (adjustedLineNumbers == true) { }
+
+        if (My_DialogueSystem.Instance.optionOneTest == true)
+        {
+            My_DialogueSystem.Instance.AddNewDialogue(npcDialogueChoiceTest, npcName);
+        }
+
+        if (alreadyTalked == false)
+        {
+            My_DialogueSystem.Instance.AddNewDialogue(npcDialogueLines, npcName);
+            alreadyTalked = true;
+        }
+        else if (alreadyTalked == true)
+        {
+            My_DialogueSystem.Instance.AddNewDialogue(npcAfterDialogueLines, npcName);
+        }
+    }
+
+    public void readXmlFile()
+    {
+        xmlDoc = new XmlDocument();
+        xmlDoc.Load(Application.dataPath + dataPath);
+        xmlRoot = xmlDoc.DocumentElement;
+
+        xmlNodeList = xmlRoot.SelectNodes(selectNodes);
+        for (int i = 0; i < xmlNodeList.Count; i++)
+        {
+            node = xmlNodeList[i];
+            Debug.Log(node.SelectSingleNode("id_0").InnerText);
+        }
+    }
+
+
+    public void writeToXmlFile() //TODO fix the write to xml function
+    {
+        xmlDoc = new XmlDocument();
+        xmlDoc.Load(Application.dataPath + dataPath);
+        xmlRoot = xmlDoc.DocumentElement;
+
+        var nodeTwo = xmlRoot.SelectSingleNode(selectSingleNode1);
+        nodeTwo.SelectSingleNode("id_0").InnerText = changeInnerText;
+        xmlDoc.Save(Application.dataPath + dataPath);
+        Debug.Log(nodeTwo.SelectSingleNode("id_0").InnerText);
+    }
+}

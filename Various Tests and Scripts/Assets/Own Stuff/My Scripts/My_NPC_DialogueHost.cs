@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml;
 
 public class My_NPC_DialogueHost : MonoBehaviour {
 
@@ -9,13 +10,10 @@ public class My_NPC_DialogueHost : MonoBehaviour {
     public TextAsset dialogueAfterLinesFile;
     //[HideInInspector] //hides the dialogue lines in the inspector
     public string[] npcDialogueLines;
+    //[HideInInspector] //hides the npcAfterDialogueLines lines in the inspector
     public string[] npcAfterDialogueLines;
-    public int[] dialogueOpenOptions; //used originally with options in the dialogue system, used with EXACT line numbering
-
-    public int endLineEarly = 100;
-    public int[] dialogueOptionStartLine;
-    bool adjustedLineNumbers;
-    bool alreadyTalked;
+    public int numberToGetAfterDialogue = 0;
+    public int alreadyTalked = 5;
 
     void Update()
     {
@@ -33,28 +31,12 @@ public class My_NPC_DialogueHost : MonoBehaviour {
     // example of how to use custom events in the inspector for UnityEvents
     public void saySomething()
     {
-        if(adjustedLineNumbers == false)
-        {
-            //endLineEarly = endLineEarly - 1;
-            for (int i = 0; i < dialogueOpenOptions.Length; i++)
-            {
-                dialogueOpenOptions[i] = dialogueOpenOptions[i] - 1;
-            }
-
-            for (int i = 0; i < dialogueOptionStartLine.Length; i++)
-            {
-                dialogueOptionStartLine[i] = dialogueOptionStartLine[i] - 2;
-            }
-            adjustedLineNumbers = true;
-        }
-        else if(adjustedLineNumbers == true) { }
-
-        if(alreadyTalked == false)
+        if (numberToGetAfterDialogue <= alreadyTalked)
         {
             My_DialogueSystem.Instance.AddNewDialogue(npcDialogueLines, npcName);
-            alreadyTalked = true;
+            numberToGetAfterDialogue++;
         }
-        else if(alreadyTalked == true)
+        else
         {
             My_DialogueSystem.Instance.AddNewDialogue(npcAfterDialogueLines, npcName);
         }

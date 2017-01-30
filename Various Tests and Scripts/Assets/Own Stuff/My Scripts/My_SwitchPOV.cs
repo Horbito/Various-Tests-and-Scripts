@@ -10,7 +10,7 @@ public class My_SwitchPOV : MonoBehaviour {
     public My_ThirdPersonCamera thirdPersonCamera;
 
     //public My_FPS_PlayerController fpsPlayerController;
-    //public My_FPS_CameraController fpsCameraController;
+    public My_FPS_CameraController fpsCamera;
     //public SkinnedMeshRenderer bodyRender;
     //public SkinnedMeshRenderer headRender;
     //public Camera fpsMainCamera;
@@ -18,12 +18,32 @@ public class My_SwitchPOV : MonoBehaviour {
     //bool fpsActivated = true;
 
     bool thirdPersonActivated;
+    public bool combatMode;
 
     public bool usingKeyboard = false;
     public bool usingGamepad = true;
 
+    void Start()
+    {
+        fpsCamera = GameObject.Find("Main Camera").transform.GetComponent<My_FPS_CameraController>();
+        thirdPersonCamera = GameObject.Find("Main Camera").transform.GetComponent<My_ThirdPersonCamera>();
+    }
+
     void Update ()
     {
+      if(combatMode == true)
+        {
+            thirdPersonCamera.enabled = true;
+            fpsCamera.enabled = false;
+            thirdPersonCamera.target.transform.localPosition = new Vector3(-0.032f, 1.553f, 0.0f);
+        }
+      if(combatMode == false)
+        {
+            thirdPersonCamera.enabled = false;
+            fpsCamera.enabled = true;
+            Camera.main.transform.localPosition = new Vector3(0.424f, 1.662f, -1.631f);
+        }
+      
       if(usingKeyboard == true) { usingGamepad = false; }
       if(usingGamepad == true){ usingKeyboard = false; }
 
